@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1" align="center">
+        <td > id </td>
+        <td> title </td>
+        <td> content </td>
+        <td> update </td>
+    <tr>
+
+<form method = "post" action="/update/{{obj.id}}">
+     {% csrf_token %}
+        <td><input type="text" name="id" value="{{obj.id}}"></td>
+        <td><input type="text" name = "title" value="{{obj.title}}"> </td>
+        <td><input type="text" name = "content" value="{{obj.content}}"> </td>
+        <td><input type="submit" name="update"></td>
+</form>
+    </tr>
+    </table>
+</body>
+</html>

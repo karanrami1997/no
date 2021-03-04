@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1" align="center">
+        <td > id </td>
+        <td> title </td>
+        <td> content </td>
+        <td>delete</td>
+        <td>edit</td>
+    {% for cat  in id %}
+    <tr>
+
+<form method = "post">
+     {% csrf_token %}
+        <td><input readonly="readonly" name="id" value="{{cat.id}}"></td>
+        <td><input readonly="readonly" name = "title" value="{{cat.title}}"> </td>
+        <td><input readonly="readonly" name = "content" value="{{cat.content}}"> </td>
+        <td><a href="/Delete/{{cat.id}}">delete</a></td>
+        <td><a href="/Edit/{{cat.id}}">edit</a></td>
+</form>
+    </tr>
+
+    {% endfor %}
+    </table>
+</body>
+</html>

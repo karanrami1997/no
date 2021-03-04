@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+    </head>
+
+    <body>
+   <form method = "post">
+        {% csrf_token %}
+        {{ form1.as_p }}
+
+
+<!--    <input type="checkbox" name="removepunc"> Remove Punctuations<br>-->
+    <button type='submit'> save data </button>
+
+   </form>
+    </body>
+</html>
